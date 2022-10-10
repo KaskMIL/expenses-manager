@@ -5,5 +5,5 @@ class Expenditure < ApplicationRecord
   validates :name, presence: true
   validates :name, length: { maximum: 25 }
   validates :amount, presence: true
-  validate :amount, numericality: { only_integer: true, greater_than: 0 }
+  validates :amount, numericality: { only_integer: true, greater_than: 0 }
 end
