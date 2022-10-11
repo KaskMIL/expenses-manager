@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :authenticate_user!
 
   protected
 
@@ -13,6 +12,10 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sign_out_path_for(_resource_or_scope)
-    new_user_session_path
+    root_path
+  end
+
+  def after_sign_in_path_for(_resource)
+    categories_path
   end
 end

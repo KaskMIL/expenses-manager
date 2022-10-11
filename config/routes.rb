@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :expenditures
   resources :categories
 
-  root 'categories#index'
+  root 'home#index'
 end
