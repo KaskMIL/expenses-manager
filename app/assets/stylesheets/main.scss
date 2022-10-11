@@ -1,0 +1,23 @@
+// Proxima Nova alternative => Montserrat (Proxima Nova is licensed) (https://w3bits.com/proxima-nova-alternative-fonts/#font-list)
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+// Box-sizing
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;  // 1rem = 10px
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --main: #3778C2;
+  --second: #5FB523;
+  --text: #434B54;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
