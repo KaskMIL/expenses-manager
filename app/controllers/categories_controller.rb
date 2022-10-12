@@ -4,12 +4,12 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    @categories = Category.all.where(user: current_user)
   end
 
   # GET /categories/1 or /categories/1.json
   def show
-    @expenditures = Expenditure.all.where(category_id: params[:id])
+    @expenditures = Expenditure.includes(:category).where(category_id: params[:id])
   end
 
   # GET /categories/new

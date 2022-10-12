@@ -2,11 +2,12 @@
 
 <%= render @category %>
 
-<%= link_to 'New expense', new_category_expenditure_path(params[:id])%>
+<%= link_to 'New expense', new_expenditure_path%>
 
 <div>
   <% @expenditures.each do |spend|%>
     <%= spend.name %>
+    $<%= spend.amount %>
   <% end %>
 </div>
 

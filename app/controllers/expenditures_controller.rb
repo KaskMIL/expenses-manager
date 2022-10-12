@@ -20,10 +20,11 @@ class ExpendituresController < ApplicationController
   # POST /expenditures or /expenditures.json
   def create
     @expenditure = Expenditure.new(expenditure_params)
+    @expenditure.author_id = current_user.id
 
     respond_to do |format|
       if @expenditure.save
-        format.html { redirect_to expenditure_url(@expenditure), notice: 'Expenditure was successfully created.' }
+        format.html { redirect_to categories_path, notice: 'Expenditure was successfully created.' }
         format.json { render :show, status: :created, location: @expenditure }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -64,6 +65,6 @@ class ExpendituresController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def expenditure_params
-    params.require(:expenditure).permit(:name, :amount)
+    params.require(:expenditure).permit(:name, :amount, :category_id)
   end
 end

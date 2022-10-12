@@ -5,6 +5,9 @@
           <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
         </li>
         <li>
+          <%= link_to 'Categories', categories_path %>
+        </li>
+        <li>
           <%= current_user.name %>
         </li>
       <% else %>
