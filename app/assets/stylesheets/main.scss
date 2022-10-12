@@ -1,5 +1,4 @@
-// Proxima Nova alternative => Montserrat (Proxima Nova is licensed) (https://w3bits.com/proxima-nova-alternative-fonts/#font-list)
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+@import 'bootstrap';
 
 @font-face {
   font-family: 'nova-proxima-bold';
@@ -22,11 +21,9 @@ html {
   box-sizing: inherit;
 }
 
-:root {
-  --main: #3778C2;
-  --second: #5FB523;
-  --text: #434B54;
-}
+$main: #3778C2;
+$second: #5FB523;
+$text: #434B54;
 
 body {
   font-size: 1.6rem;
