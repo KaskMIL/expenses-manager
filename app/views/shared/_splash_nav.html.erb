@@ -1,5 +1,5 @@
-<nav>
-  <ul>
+<nav class='container home-nav'>
+  <ul class='d-flex'>
        <% if user_signed_in? %>
         <li>
           <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
@@ -11,12 +11,17 @@
           <%= current_user.name %>
         </li>
       <% else %>
-        <li>
-          <%= link_to 'Register', new_user_registration_path %>
+        <%= link_to new_user_session_path do %>
+        <li class='log rounded'>
+           LOG IN
         </li>
+        <% end %>
+
+        <%= link_to new_user_registration_path do %>
         <li>
-          <%= link_to 'Sign in', new_user_session_path %>
+            SIGN UP
         </li>
+        <% end %>
       <% end %>
   </ul>
 </nav>

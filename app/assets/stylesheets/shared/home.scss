@@ -1,0 +1,38 @@
+$main: #3778C2;
+$second: #5FB523;
+$text: #434B54;
+
+.home-main {
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-nav {
+  height: 20vh;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+
+    a {
+      color: $text;
+      text-decoration: none;
+      flex-basis: 100%;
+    }
+
+    .log {
+      background-color: $main;
+      padding: 1rem 0;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
