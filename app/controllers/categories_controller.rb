@@ -8,7 +8,9 @@ class CategoriesController < ApplicationController
   end
 
   # GET /categories/1 or /categories/1.json
-  def show; end
+  def show
+    @expenditures = Expenditure.all.where(category_id: params[:id])
+  end
 
   # GET /categories/new
   def new
