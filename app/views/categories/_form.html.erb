@@ -1,3 +1,36 @@
+<%
+  categories = [
+    {
+      icon: 'bill_icon',
+      name: 'Bills'
+    },
+    {
+      icon: 'food_icon',
+      name: 'Food'
+    },
+    {
+      icon: 'game_icon',
+      name: 'Videogames'
+    },
+    {
+      icon: 'healthcare_icon',
+      name: 'Healthcare'
+    },
+    {
+      icon: 'movies_icon',
+      name: 'Entertaiment'
+    },
+    {
+      icon: 'music_icon',
+      name: 'Music'
+    },
+    {
+      icon: 'sports_icon',
+      name: 'Sports'
+    }
+  ]
+%>
+
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
     <div style="color: red">
@@ -11,17 +44,33 @@
     </div>
   <% end %>
 
+  <%= form.hidden_field :icon, required: 'required' %>
+
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+  <div class='cat-icon'>
+    <%= form.label :Select_Icon, style: "display: block" %>
+    <div class='icon-container'>
+      <% categories.each do |cat| %>
+        <div onclick = "iconChoice('<%= cat[:icon]%>')">
+          <%= image_tag("icons/#{cat[:icon]}.png")%>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+
+<script>
+const icon_input = document.getElementById('category_icon');
+
+const iconChoice = (icon) => {
+  icon_input.value = icon;
+}
+</script>
