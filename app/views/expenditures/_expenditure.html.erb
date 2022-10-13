@@ -1,12 +1,24 @@
 <div id="<%= dom_id expenditure %>">
-  <p>
-    <strong>Name:</strong>
-    <%= expenditure.name %>
-  </p>
 
-  <p>
-    <strong>Amount:</strong>
-    <%= expenditure.amount %>
-  </p>
+  <div class='exp-card-container d-flex justify-content-between border rounded mb-3 p-3'>
+          <%Category.includes(:expenditures).where(id: expenditure.category_id).each do |cat| %>
+            <img src="<%=asset_path("icons/#{cat.icon}.png")%>" alt="<%=cat.name %>" class="card-image">
+          <%end%>
+
+          <div class='exp-info'>
+              <p class='info-title'>
+                <%= expenditure.name %>
+              </p>
+
+              <p class='info-amount'>$
+                <%= expenditure.amount %>
+              </p>
+          </div>
+          
+          <div>
+            <%= link_to "Show", expenditure, class: 'btn btn-outline-success btn-show' %>
+          </div>
+        </div>
+
 
 </div>
