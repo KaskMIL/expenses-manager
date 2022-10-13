@@ -1,0 +1,20 @@
+$text: #434b54;
+
+.exp-container {
+  padding: 1rem;
+
+  .exp-card-cont {
+    margin-bottom: 1rem;
+    background-color: orange;
+    color: white;
+
+    h2 {
+      margin: 0;
+    }
+
+    .exp-title {
+      font-family: 'nova-proxima-bold';
+      font-size: 2rem;
+    }
+  }
+}
