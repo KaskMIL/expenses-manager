@@ -1,37 +1,37 @@
 <div class='new-sess'>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <div class='login-title d-flex justify-content-between'>
-    <%= link_to root_path do %>
-      <i class="fa-solid fa-arrow-left"></i>
-    <% end %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class='login-title d-flex justify-content-between'>
+      <%= link_to root_path do %>
+        <i class="fa-solid fa-arrow-left"></i>
+      <% end %>
 
-    <h2>REGISTER</h2>
+      <h2>REGISTER</h2>
 
-    <div class="actions">
-      <%= f.submit "Next" %>
-    </div>
-  </div>
-
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class='container login-form'>
-    <div class='field reg_field bot-bor'>
-      <%= f.text_field :name, placeholder: 'Full name' %>
+      <div class="actions">
+        <%= f.submit "Next" %>
+      </div>
     </div>
 
-    <div class="field bot-bor">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
-    </div>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="field bot-bor">
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password min 6 char' %>
-    </div>
+    <div class='container login-form'>
+      <div class='field reg_field bot-bor'>
+        <%= f.text_field :name, placeholder: 'Full name' %>
+      </div>
 
-    <div class="field">
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Repeat password' %>
-    </div>
-  </div>
-<% end %>
+      <div class="field bot-bor">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="field bot-bor">
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password min 6 char' %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Repeat password' %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
 </div>
