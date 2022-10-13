@@ -1,19 +1,16 @@
 <div class='cat-card-cont border rounded' id="<%= dom_id category %>">
 
-    <div>
-      <img src='<%= category.icon %>' alt='<%= category.name %>'>
+    <div class='card-data-cont d-flex justify-content-between'>
 
-      <%= link_to category.name, category_path(category.id)%>
+      <div class='img-cont'>
+        <%= image_tag('icons/game_icon.png')%>
+      </div>
+      <div class='cat-name'>
+        <%= link_to category.name, category_path(category.id)%>
+      </div>
+      <div>
+        <%= button_to 'Remove', category_path(category.id), method: :delete, class: 'btn btn-outline-danger' %>
+      </div>
 
-      <% if category.expenditures.count.zero? %>
-        <p>$0</p>
-      <% else %>
-        <p><%=  %></p>
-      <% end %>
     </div>
-
-    <div>
-      <%= button_to 'Remove', category_path(category.id), method: :delete %>
-    </div>
-
 </div>
