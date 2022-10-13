@@ -1,5 +1,23 @@
+.form-cont {
+  background-color: white;
+  padding: 1rem;
+
+  .form-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(222, 222, 222);
+    margin-bottom: 2rem;
+  }
+}
+
+.exp-label {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 .exp-cat-cont {
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .exp-cat-card {
@@ -18,4 +36,8 @@
 
 .cat-selected {
   background-color: orange;
+}
+
+.btn-exp {
+  font-size: 1.5rem;
 }
