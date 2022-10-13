@@ -15,19 +15,19 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class='container login-form'>
-      <div class='field reg_field bot-bor'>
+      <div class='field reg_field no-bor bot-bor'>
         <%= f.text_field :name, placeholder: 'Full name' %>
       </div>
 
-      <div class="field bot-bor">
+      <div class="field no-bor bot-bor">
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
       </div>
 
-      <div class="field bot-bor">
+      <div class="field no-bor bot-bor">
         <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password min 6 char' %>
       </div>
 
-      <div class="field">
+      <div class="field no-bor">
         <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Repeat password' %>
       </div>
     </div>

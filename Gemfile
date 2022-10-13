@@ -52,7 +52,7 @@ gem 'bootsnap', require: false
 gem 'bootstrap', '~> 5.2.1'
 
 # Font-awesome
-gem "font-awesome-sass", "~> 6.2.0"
+gem 'font-awesome-sass', '~> 6.2.0'
 
 # Use Sass to process CSS
 gem 'sassc-rails'

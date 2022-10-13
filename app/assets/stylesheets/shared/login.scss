@@ -1,7 +1,7 @@
-$main: #3778C2;
-$second: #5FB523;
-$text: #434B54;
-$body-form-bg: #F5F6F8;
+$main: #3778c2;
+$second: #5fb523;
+$text: #434b54;
+$body-form-bg: #f5f6f8;
 
 .new-sess {
   background-color: $body-form-bg;
@@ -36,21 +36,26 @@ $body-form-bg: #F5F6F8;
 }
 
 .login-form {
- background-color: white;
- border-top: solid 1px rgb(209, 209, 209);
- border-bottom: solid 0.1px rgb(209, 209, 209);
+  background-color: white;
+  border-top: solid 1px rgb(209, 209, 209);
+  border-bottom: solid 0.1px rgb(209, 209, 209);
 
- .bot-bor {
-  input {
-    border-bottom: solid 0.1px rgb(209, 209, 209);
+  .no-bor {
+    input {
+      border: none;
+      padding: 1rem;
+      width: 100%;
+    }
   }
-}
 
- input {
-  border: none;
-  padding: 1rem;
-  width: 100%;
- }
+  .bot-bor {
+    input {
+      border: none;
+      border-bottom: solid 0.1px rgb(209, 209, 209);
+      padding: 1rem;
+      width: 100%;
+    }
+  }
 }
 
 .pass-login {
