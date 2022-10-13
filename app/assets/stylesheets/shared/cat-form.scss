@@ -47,6 +47,11 @@ $text: #434b54;
     padding: 1rem 2rem;
     font-size: 2rem;
   }
+
+  .btn-green {
+    background-color: $second;
+    color: white;
+  }
 }
 
 .selected {
@@ -54,5 +59,13 @@ $text: #434b54;
   font-family: 'nova-proxima-bold';
   color: white;
   border: solid 1px black;
+}
 
+.back-cat-btn {
+  text-align: center;
+
+  .back-btn {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+  }
 }

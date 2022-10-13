@@ -5,10 +5,10 @@
     <i class="fa-solid fa-magnifying-glass"></i>
   </header>
 
-  <main class='container'>
+  <main class='container pb-5'>
     <%= render "form", category: @category %>
-    <div>
-      <%= link_to "Back to categories", categories_path %>
+    <div class='back-cat-btn '>
+      <%= link_to "Back to categories", categories_path, class:'btn btn-outline-secondary back-btn' %>
     </div>
   </main>
 </div>

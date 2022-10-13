@@ -14,7 +14,8 @@
         <%= render category %>
       <% end %>
     </div>
-
-    <%= link_to "New category", new_category_path %>
+    <div class='sub-cat-cont'>
+      <%= link_to "New category", new_category_path, class: 'btn btn-green sub-btn' %>
+    </div>
   </main>
 </div>
