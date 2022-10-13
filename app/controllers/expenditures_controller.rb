@@ -3,7 +3,7 @@ class ExpendituresController < ApplicationController
 
   # GET /expenditures or /expenditures.json
   def index
-    @expenditures = Expenditure.all
+    @expenditures = Expenditure.all.where(user: current_user)
   end
 
   # GET /expenditures/1 or /expenditures/1.json
