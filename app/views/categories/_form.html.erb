@@ -55,7 +55,7 @@
     <div class='icon-container'>
       <% categories.each do |cat| %>
         <div id="card_<%= cat[:icon]%>" class='icon-card border rounded' onclick = "iconChoice('<%= cat[:icon]%>')">
-          <%= image_tag("icons/#{cat[:icon]}.png")%>
+          <img src="<%=asset_path("icons/#{cat[:icon]}.png")%>" alt="<%=cat[:name] %>" class="card-image">
           <%= cat[:name] %>
         </div>
       <% end %>

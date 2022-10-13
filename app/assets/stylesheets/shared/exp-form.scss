@@ -1,0 +1,21 @@
+.exp-cat-cont {
+  flex-wrap: wrap;
+}
+
+.exp-cat-card {
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+
+  img {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.cat-selected {
+  background-color: orange;
+}

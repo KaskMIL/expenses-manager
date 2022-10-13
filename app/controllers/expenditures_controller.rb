@@ -12,6 +12,7 @@ class ExpendituresController < ApplicationController
   # GET /expenditures/new
   def new
     @expenditure = Expenditure.new
+    @categories = Category.includes(:user).where(user: current_user)
   end
 
   # GET /expenditures/1/edit

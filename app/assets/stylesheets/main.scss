@@ -4,6 +4,7 @@
 @import './shared/index-cat.scss';
 @import './shared/cat-cards.scss';
 @import './shared/cat-form.scss';
+@import './shared/exp-form.scss';
 
 @font-face {
   font-family: 'nova-proxima-bold';
@@ -43,4 +44,9 @@ body {
 
 .light {
   background-color: $second;
+}
+
+.card-image {
+  width: 70px;
+  height: auto;
 }

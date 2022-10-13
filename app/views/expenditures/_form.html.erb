@@ -11,9 +11,18 @@
     </div>
   <% end %>
 
+  <%= form.hidden_field :category_id, required: 'required' %>
+
   <div>
-    <%= form.label :category %>
-    <%= form.select :category_id, current_user.categories&.map{ |cat| [cat.name, cat.id] } %>
+    <%= form.label :Select_category %>
+    <div class='exp-cat-cont d-flex'>
+      <% @categories.each do |cat| %>
+        <div class='exp-cat-card border p-3' id="<%= cat.id%>" onclick = "iconChoice('<%= cat.id%>')">
+          <img src="<%=asset_path("icons/#{cat.icon}.png")%>" alt="<%=cat.name %>" class="card-image">
+          <p><%= cat.name%></p>
+        </div>
+      <%end%>
+    </div>
   </div>
 
   <div>
@@ -30,3 +39,20 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<script>
+const icon_input = document.getElementById('expenditure_category_id');
+const icon_cards = document.querySelectorAll('.exp-cat-card');
+
+const cleanClass = (card_arr) => {
+  for(let i = 0; i < card_arr.length; i += 1) {
+    card_arr[i].classList.remove('cat-selected')
+  };
+}
+
+const iconChoice = (icon) => {
+  cleanClass(icon_cards);
+  icon_input.value = icon;
+  document.getElementById(`${icon}`).classList.add('cat-selected')
+}
+</script>
