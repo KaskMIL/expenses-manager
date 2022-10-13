@@ -1,0 +1,37 @@
+$main: #3778c2;
+$second: #5fb523;
+$text: #434b54;
+
+.index-cat {
+  background-color: $main;
+  padding: 1rem;
+
+  .title {
+    color: white;
+    font-size: 1.7rem;
+  }
+
+  i {
+    color: white;
+    font-size: 2rem;
+  }
+
+  .coll-container {
+    margin: 0.7rem 0;
+  }
+
+  .nav-cat-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+  }
+
+  .log-out-btn {
+    border: none;
+    background-color: transparent;
+    font-family: 'nova-proxima-light';
+    color: white;
+    padding: 0;
+    font-size: 1.8rem;
+  }
+}
