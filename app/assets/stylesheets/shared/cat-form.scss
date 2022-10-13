@@ -1,6 +1,58 @@
+$main: #3778c2;
+$second: #5fb523;
+$text: #434b54;
+
+.form-cat-cont {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.form-name-cont {
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border-bottom: solid 0.1px rgb(192, 192, 192);
+  padding: 1rem 0;
+}
+
+.input-cat {
+  border: none;
+  width: 100%;
+  color: black;
+}
+
 .cat-icon {
-  img {
-    width: 50px;
-    height: auto;
+
+  .icon-label {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
   }
+
+  .icon-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    img {
+      width: 50px;
+      height: auto;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.sub-cat-cont {
+  text-align: center;
+
+  .sub-btn {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+  }
+}
+
+.selected {
+  background-color: orange;
+  font-family: 'nova-proxima-bold';
+  color: white;
+  border: solid 1px black;
+
 }

@@ -1,9 +1,16 @@
-<h1>New category</h1>
+<div class='new-sess'>
+  <header class='container d-flex justify-content-between align-items-center index-cat'>
+    <%= render 'shared/dropdown_menu' %>
+    <h1 class='mb-0 title'>NEW CATEGORY</h1>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </header>
 
-<%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Back to categories", categories_path %>
+  <main class='container'>
+    <%= render "form", category: @category %>
+    <div>
+      <%= link_to "Back to categories", categories_path %>
+    </div>
+  </main>
 </div>
+
+
