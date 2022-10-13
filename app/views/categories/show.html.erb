@@ -9,8 +9,10 @@
     <p style="color: green"><%= notice %></p>
 
     <%= render @category %>
-    <div class='sub-cat-cont'>
-      <%= link_to 'New expense', new_expenditure_path, class: 'btn btn-green sub-btn'%>
+
+    <div class='total-exp d-flex justify-content-between rounded'>
+      <h2 class='exp-title'>Total spend:</h2>
+      <h2>$<%= @total_amount %></h2>
     </div>
 
     <div class='exp-container'>
@@ -21,6 +23,11 @@
         </div>
       <% end %>
     </div>
+
+    <div class='sub-cat-cont mb-4'>
+      <%= link_to 'New expense', new_expenditure_path, class: 'btn btn-green sub-btn'%>
+    </div>
+
     <div class='back-cat-btn '>
       <%= link_to "Back to categories", categories_path, class:'btn btn-outline-secondary back-btn' %>
     </div>

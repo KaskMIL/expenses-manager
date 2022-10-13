@@ -1,3 +1,5 @@
+$main: #3778c2;
+$second: #5fb523;
 $text: #434b54;
 
 .exp-container {
@@ -16,5 +18,19 @@ $text: #434b54;
       font-family: 'nova-proxima-bold';
       font-size: 2rem;
     }
+  }
+}
+
+.total-exp {
+  border: solid 1px $second;
+  padding: 1rem;
+
+  h2 {
+    margin: 0;
+  }
+
+  .exp-title {
+    font-family: 'nova-proxima-bold';
+    font-size: 2rem;
   }
 }
