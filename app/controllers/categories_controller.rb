@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1 or /categories/1.json
   def show
-    @expenditures = Expenditure.all.where(category_id: params[:id])
+    @expenditures = Expenditure.all.where(category_id: params[:id]).order('created_at DESC')
     @total_amount = 0
 
     @expenditures.each do |spend|
@@ -32,7 +32,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to category_url(@category), notice: 'Category was successfully created.' }
+        format.html { redirect_to categories_path, notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
         format.html { render :new, status: :unprocessable_entity }

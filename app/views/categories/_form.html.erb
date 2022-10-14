@@ -66,20 +66,3 @@
     <%= form.submit class: 'btn btn-outline-success sub-btn' %>
   </div>
 <% end %>
-
-<script>
-const icon_input = document.getElementById('category_icon');
-const icon_cards = document.querySelectorAll('.icon-card');
-
-const cleanClass = (card_arr) => {
-  for(let i = 0; i < card_arr.length; i += 1) {
-    card_arr[i].classList.remove('selected')
-  };
-}
-
-const iconChoice = (icon) => {
-  cleanClass(icon_cards);
-  icon_input.value = icon;
-  document.getElementById(`card_${icon}`).classList.add('selected')
-}
-</script>

@@ -5,6 +5,10 @@ $text: #434b54;
 .exp-container {
   padding: 1rem;
 
+  a {
+    text-decoration: none;
+  }
+
   .exp-card-cont {
     margin-bottom: 1rem;
     background-color: orange;

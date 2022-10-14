@@ -17,10 +17,12 @@
 
     <div class='exp-container'>
       <% @expenditures.each do |spend|%>
-        <div class='exp-card-cont d-flex justify-content-between p-3 border rounded'>
-          <h2 class='exp-title'><%= spend.name %></h2>
-          <h2>$<%= spend.amount %></h2>
-        </div>
+        <%= link_to expenditure_path(spend) do%>
+          <div class='exp-card-cont d-flex justify-content-between p-3 border rounded'>
+            <h2 class='exp-title'><%= spend.name %></h2>
+            <h2>$<%= spend.amount %></h2>
+          </div>
+        <% end %>
       <% end %>
     </div>
 
