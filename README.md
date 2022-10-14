@@ -9,6 +9,7 @@
 - Ruby on Rails
 - Postgresql
 - SASS
+- Bootstrap
 
 ## Live Demo
 
