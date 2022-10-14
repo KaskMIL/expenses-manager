@@ -10,9 +10,9 @@
 - Postgresql
 - SASS
 
-## Live Demo (coming soon...)
+## Live Demo
 
-<!---[Live Demo Link](https://livedemo.com)-->
+-[Expenses-manager](https://expenses-manager-mila.herokuapp.com/)
 
 
 ## Getting Started

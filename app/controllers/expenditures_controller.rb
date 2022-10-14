@@ -29,7 +29,7 @@ class ExpendituresController < ApplicationController
         format.html { redirect_to categories_path, notice: 'Expenditure was successfully created.' }
         format.json { render :show, status: :created, location: @expenditure }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { redirect_to expenditures_path, notice: 'Select a category to create a new expense' }
         format.json { render json: @expenditure.errors, status: :unprocessable_entity }
       end
     end
