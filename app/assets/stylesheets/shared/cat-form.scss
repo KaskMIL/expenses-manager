@@ -21,7 +21,6 @@ $text: #434b54;
 }
 
 .cat-icon {
-
   .icon-label {
     padding: 1rem 0;
     margin-bottom: 1rem;
@@ -56,7 +55,7 @@ $text: #434b54;
 
 .selected {
   background-color: orange;
-  font-family: 'nova-proxima-bold';
+  font-family: 'nova-proxima-bold', sans-serif;
   color: white;
   border: solid 1px black;
 }
