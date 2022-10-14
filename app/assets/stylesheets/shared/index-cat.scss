@@ -16,13 +16,18 @@ $text: #434b54;
     font-size: 2rem;
   }
 
-  .coll-container {
-    margin: 0.7rem 0;
+  .ul-nav {
+    display: flex;
+    align-items: center;
   }
 
-  .first {
-    margin-top: 1rem;
-  }
+  // .coll-container {
+  //   margin: 0.7rem 0;
+  // }
+
+  // .first {
+  //   margin-top: 1rem;
+  // }
 
   .nav-cat-link {
     color: white;

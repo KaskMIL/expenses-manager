@@ -66,9 +66,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Special aknowledgment to (gregorio Vella)[www.gregoirevella.com], the design of the project is inspired in his work.
 
 ## 📝 License
 

@@ -4,7 +4,7 @@ class ExpendituresController < ApplicationController
 
   # GET /expenditures or /expenditures.json
   def index
-    @expenditures = Expenditure.all.where(user: current_user)
+    @expenditures = Expenditure.all.where(user: current_user).order('created_at DESC')
   end
 
   # GET /expenditures/1 or /expenditures/1.json
