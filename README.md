@@ -12,7 +12,7 @@
 
 ## Live Demo
 
--[Expenses-manager](https://expenses-manager-mila.herokuapp.com/)
+- [Expenses-manager](https://expenses-manager-mila.herokuapp.com/)
 
 
 ## Getting Started
