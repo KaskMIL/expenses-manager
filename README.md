@@ -14,6 +14,8 @@
 
 - [Expenses-manager](https://expenses-manager-mila.herokuapp.com/)
 
+## [Explanation Video](https://www.loom.com/share/f40d9ba38d4a4fb98319092c9e030114)
+
 
 ## Getting Started
 
@@ -66,7 +68,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Special aknowledgment to (gregorio Vella)[www.gregoirevella.com], the design of the project is inspired in his work.
+- Special aknowledgment to [gregorio Vella](www.gregoirevella.com), the design of the project is inspired in his work.
 - <a href="https://www.flaticon.com/free-icons/"> - Flaticon</a>
 
 ## 📝 License
