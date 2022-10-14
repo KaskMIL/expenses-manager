@@ -1,0 +1,27 @@
+<nav class='container home-nav'>
+  <ul class='d-flex'>
+       <% if user_signed_in? %>
+        <li>
+          <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
+        </li>
+        <li>
+          <%= link_to 'Categories', categories_path %>
+        </li>
+        <li>
+          <%= current_user.name %>
+        </li>
+      <% else %>
+        <%= link_to new_user_session_path do %>
+        <li class='log rounded'>
+           LOG IN
+        </li>
+        <% end %>
+
+        <%= link_to new_user_registration_path do %>
+        <li>
+            SIGN UP
+        </li>
+        <% end %>
+      <% end %>
+  </ul>
+</nav>

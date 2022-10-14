@@ -1,0 +1,28 @@
+<div class='new-sess'>
+  <header class='container d-flex justify-content-between align-items-center index-cat'>
+    <%= render 'shared/dropdown_menu' %>
+    <h1 class='mb-0 title'>EXPENDITURES</h1>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </header>
+
+  <main class='container'>
+
+    <p style="color: green"><%= notice %></p>
+
+    <% if @expenditures.empty?%>
+      <p class='no-cat'>No expenditures to show</p>
+    <% else %>
+      <div id="expenditures">
+        <% @expenditures.each do |expenditure| %>
+          <%= link_to expenditure_path(expenditure) do %>
+            <%= render expenditure %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+    <div class='sub-cat-cont'>
+      <%= link_to "New expenditure", new_expenditure_path, class: 'btn btn-green sub-btn' %>
+    </div>
+  </main>
+</div>
+

@@ -1,0 +1,32 @@
+<div class='new-sess'>
+  <header class='container d-flex justify-content-between align-items-center index-cat'>
+    <%= render 'shared/dropdown_menu' %>
+    <h1 class='mb-0 title'>NEW CATEGORY</h1>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </header>
+
+  <main class='container pb-5'>
+    <%= render "form", category: @category %>
+    <div class='back-cat-btn '>
+      <%= link_to "Back to categories", categories_path, class:'btn btn-outline-secondary back-btn' %>
+    </div>
+  </main>
+</div>
+<script>
+const icon_input = document.getElementById('category_icon');
+const icon_cards = document.querySelectorAll('.icon-card');
+
+const cleanClass = (card_arr) => {
+  for(let i = 0; i < card_arr.length; i += 1) {
+    card_arr[i].classList.remove('selected')
+  };
+}
+
+const iconChoice = (icon) => {
+  cleanClass(icon_cards);
+  icon_input.value = icon;
+  document.getElementById(`card_${icon}`).classList.add('selected')
+}
+</script>
+
+

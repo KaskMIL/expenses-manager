@@ -1,0 +1,68 @@
+<%
+  categories = [
+    {
+      icon: 'bill_icon',
+      name: 'Bills'
+    },
+    {
+      icon: 'food_icon',
+      name: 'Food'
+    },
+    {
+      icon: 'game_icon',
+      name: 'Videogames'
+    },
+    {
+      icon: 'healthcare_icon',
+      name: 'Healthcare'
+    },
+    {
+      icon: 'movies_icon',
+      name: 'Entertaiment'
+    },
+    {
+      icon: 'music_icon',
+      name: 'Music'
+    },
+    {
+      icon: 'sports_icon',
+      name: 'Sports'
+    }
+  ]
+%>
+
+<%= form_with(model: category, class: 'form-cat-cont') do |form| %>
+  <% if category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :icon, required: 'required' %>
+
+  <div class='form-name-cont'>
+    <%= form.text_field :name, class: 'input-cat', placeholder: 'Category name' %>
+  </div>
+
+  <div class='cat-icon'>
+    <%= form.label :Select_Icon, class: 'icon-label' %>
+    <div class='icon-container'>
+      <% categories.each do |cat| %>
+        <div id="card_<%= cat[:icon]%>" class='icon-card border rounded' onclick = "iconChoice('<%= cat[:icon]%>')">
+          <img src="<%=asset_path("icons/#{cat[:icon]}.png")%>" alt="<%=cat[:name] %>" class="card-image">
+          <%= cat[:name] %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class='sub-cat-cont'>
+    <%= form.submit class: 'btn btn-outline-success sub-btn' %>
+  </div>
+<% end %>

@@ -9,10 +9,13 @@
 - Ruby on Rails
 - Postgresql
 - SASS
+- Bootstrap
 
-## Live Demo (coming soon...)
+## Live Demo
 
-<!---[Live Demo Link](https://livedemo.com)-->
+- [Expenses-manager](https://expenses-manager-mila.herokuapp.com/)
+
+## [Explanation Video](https://www.loom.com/share/f40d9ba38d4a4fb98319092c9e030114)
 
 
 ## Getting Started
@@ -31,7 +34,7 @@ To get a local copy up and running, fallow these simple steps:
 ### Setup
 
 - git clone git@github.com:KaskMIL/expenses-manager.git
-- cd blog-app
+- cd expenses-manager
 
 ### Install
 
@@ -66,9 +69,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Special aknowledgment to [gregorio Vella](www.gregoirevella.com), the design of the project was inspired in his work.
+- <a href="https://www.flaticon.com/free-icons/">Flaticon</a>
 
 ## 📝 License
 

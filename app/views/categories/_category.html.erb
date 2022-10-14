@@ -1,0 +1,16 @@
+<div class='cat-card-cont border rounded' id="<%= dom_id category %>">
+
+    <div class='card-data-cont d-flex justify-content-between'>
+
+      <div class='img-cont'>
+        <%= image_tag("icons/#{category.icon}.png")%>
+      </div>
+      <div class='cat-name'>
+        <%= link_to category.name, category_path(category.id)%>
+      </div>
+      <div>
+        <%= button_to 'Remove', category_path(category.id), method: :delete, class: 'btn btn-outline-danger' %>
+      </div>
+
+    </div>
+</div>

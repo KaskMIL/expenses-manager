@@ -1,0 +1,52 @@
+@import 'bootstrap';
+@import './shared/home.scss';
+@import './shared/login.scss';
+@import './shared/index-cat.scss';
+@import './shared/cat-cards.scss';
+@import './shared/cat-form.scss';
+@import './shared/exp-form.scss';
+
+@font-face {
+  font-family: 'nova-proxima-bold';
+  src:
+    url('./fonts/ProximaNova-Bold.woff2') format('woff2'),
+    url('./fonts/ProximaNova-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'nova-proxima-light';
+  src:
+    url('./fonts/ProximaNovaA-Light.woff2') format('woff2'),
+    url('./fonts/ProximaNovaA-Light.woff') format('woff');
+}
+
+// Box-sizing
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;  // 1rem = 10px
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+$main: #3778c2;
+$second: #5fb523;
+$text: #434b54;
+
+body {
+  font-size: 1.6rem;
+  font-family: 'nova-proxima-light', sans-serif;
+  font-weight: 300;
+}
+
+.light {
+  background-color: $second;
+}
+
+.card-image {
+  width: 70px;
+  height: auto;
+}
