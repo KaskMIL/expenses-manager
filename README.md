@@ -31,7 +31,7 @@ To get a local copy up and running, fallow these simple steps:
 ### Setup
 
 - git clone git@github.com:KaskMIL/expenses-manager.git
-- cd blog-app
+- cd expenses-manager
 
 ### Install
 
