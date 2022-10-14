@@ -1,14 +1,24 @@
-<p style="color: green"><%= notice %></p>
+<div class='new-sess'>
+  <header class='container d-flex justify-content-between align-items-center index-cat'>
+    <%= render 'shared/dropdown_menu' %>
+    <h1 class='mb-0 title'>CATEGORIES</h1>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </header>
 
-<h1>Categories</h1>
+  <main class='container'>
 
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
+    <p style="color: green"><%= notice %></p>
+    <% if @categories.empty? %>
+      <p class='no-cat'>No categories to show</p>
+    <% else %>
+      <div id="categories">
+        <% @categories.each do |category| %>
+          <%= render category %>
+        <% end %>
+      </div>
+    <% end %>
+    <div class='sub-cat-cont'>
+      <%= link_to "New category", new_category_path, class: 'btn btn-green sub-btn' %>
+    </div>
+  </main>
 </div>
-
-<%= link_to "New category", new_category_path %>

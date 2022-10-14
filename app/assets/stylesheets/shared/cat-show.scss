@@ -1,0 +1,40 @@
+$main: #3778c2;
+$second: #5fb523;
+$text: #434b54;
+
+.total-exp {
+  border: solid 1px $second;
+  padding: 1rem;
+
+  h2 {
+    margin: 0;
+  }
+
+  .exp-title {
+    font-family: 'nova-proxima-bold', sans-serif;
+    font-size: 2rem;
+  }
+}
+
+.exp-container {
+  padding: 1rem;
+
+  a {
+    text-decoration: none;
+  }
+
+  .exp-card-cont {
+    margin-bottom: 1rem;
+    background-color: orange;
+    color: white;
+
+    h2 {
+      margin: 0;
+    }
+
+    .exp-title {
+      font-family: 'nova-proxima-bold', sans-serif;
+      font-size: 2rem;
+    }
+  }
+}

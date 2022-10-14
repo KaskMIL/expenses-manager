@@ -1,0 +1,38 @@
+$main: #3778c2;
+$second: #5fb523;
+$text: #434b54;
+
+.exp-card-container {
+  align-items: center;
+
+  img {
+    width: 70px;
+    height: auto;
+    margin-right: 1rem;
+  }
+
+  .info-title {
+    font-size: 2rem;
+    color: $text;
+  }
+
+  .info-amount {
+    color: $second;
+  }
+
+  .exp-info {
+    text-align: center;
+    font-family: 'nova-proxima-bold', sans-serif;
+    padding: 0 1rem;
+  }
+
+  .btn-show {
+    font-size: 1.7rem;
+  }
+}
+
+#expenditures {
+  a {
+    text-decoration: none;
+  }
+}

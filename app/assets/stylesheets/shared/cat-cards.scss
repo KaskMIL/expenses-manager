@@ -1,0 +1,33 @@
+$main: #3778c2;
+$second: #5fb523;
+$text: #434b54;
+
+.cat-card-cont {
+  background-color: white;
+  color: $text;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.card-data-cont {
+  align-items: center;
+
+  .img-cont {
+    margin-right: 1.5rem;
+
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  .cat-name {
+    font-family: 'nova-proxima-bold', sans-serif;
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 2.5rem;
+    }
+  }
+}

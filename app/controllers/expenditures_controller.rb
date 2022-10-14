@@ -1,9 +1,10 @@
 class ExpendituresController < ApplicationController
   before_action :set_expenditure, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   # GET /expenditures or /expenditures.json
   def index
-    @expenditures = Expenditure.all
+    @expenditures = Expenditure.all.where(user: current_user).order('created_at DESC')
   end
 
   # GET /expenditures/1 or /expenditures/1.json
@@ -12,6 +13,7 @@ class ExpendituresController < ApplicationController
   # GET /expenditures/new
   def new
     @expenditure = Expenditure.new
+    @categories = Category.all.where(user: current_user)
   end
 
   # GET /expenditures/1/edit
@@ -20,10 +22,11 @@ class ExpendituresController < ApplicationController
   # POST /expenditures or /expenditures.json
   def create
     @expenditure = Expenditure.new(expenditure_params)
+    @expenditure.author_id = current_user.id
 
     respond_to do |format|
       if @expenditure.save
-        format.html { redirect_to expenditure_url(@expenditure), notice: 'Expenditure was successfully created.' }
+        format.html { redirect_to categories_path, notice: 'Expenditure was successfully created.' }
         format.json { render :show, status: :created, location: @expenditure }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -64,6 +67,6 @@ class ExpendituresController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def expenditure_params
-    params.require(:expenditure).permit(:name, :amount)
+    params.require(:expenditure).permit(:name, :amount, :category_id)
   end
 end

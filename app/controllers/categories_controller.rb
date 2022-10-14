@@ -1,13 +1,21 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_category, only: %i[show edit update destroy]
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    @categories = Category.all.where(user: current_user)
   end
 
   # GET /categories/1 or /categories/1.json
-  def show; end
+  def show
+    @expenditures = Expenditure.all.where(category_id: params[:id]).order('created_at DESC')
+    @total_amount = 0
+
+    @expenditures.each do |spend|
+      @total_amount += spend.amount
+    end
+  end
 
   # GET /categories/new
   def new
@@ -20,10 +28,11 @@ class CategoriesController < ApplicationController
   # POST /categories or /categories.json
   def create
     @category = Category.new(category_params)
+    @category.user = current_user
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to category_url(@category), notice: 'Category was successfully created.' }
+        format.html { redirect_to categories_path, notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
         format.html { render :new, status: :unprocessable_entity }
