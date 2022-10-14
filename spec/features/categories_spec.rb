@@ -17,6 +17,7 @@ RSpec.describe 'Test Categories', type: :feature do
   end
 
   it 'Should show the new Category name' do
+    visit categories_path
     expect(page).to have_content(@category.name)
   end
 
