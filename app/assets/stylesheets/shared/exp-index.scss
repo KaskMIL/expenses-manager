@@ -11,22 +11,28 @@ $text: #434b54;
     margin-right: 1rem;
   }
 
+  .info-title {
+    font-size: 2rem;
+    color: $text;
+  }
+
+  .info-amount {
+    color: $second;
+  }
+
   .exp-info {
     text-align: center;
     font-family: 'nova-proxima-bold';
     padding: 0 1rem;
-
-    .info-title {
-      font-size: 2rem;
-      color: $text;
-    }
-
-    .info-amount {
-      color: $second;
-    }
   }
 
   .btn-show {
     font-size: 1.7rem;
+  }
+}
+
+#expenditures {
+  a {
+    text-decoration: none;
   }
 }

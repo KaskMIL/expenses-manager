@@ -14,7 +14,9 @@
     <% else %>
       <div id="expenditures">
         <% @expenditures.each do |expenditure| %>
-          <%= render expenditure %>
+          <%= link_to expenditure_path(expenditure) do %>
+            <%= render expenditure %>
+          <% end %>
         <% end %>
       </div>
     <% end %>

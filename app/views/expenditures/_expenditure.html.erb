@@ -5,19 +5,13 @@
             <img src="<%=asset_path("icons/#{cat.icon}.png")%>" alt="<%=cat.name %>" class="card-image">
           <%end%>
 
-          <div class='exp-info'>
-              <p class='info-title'>
+              <p class='info-title exp-info'>
                 <%= expenditure.name %>
               </p>
 
-              <p class='info-amount'>$
+              <p class='info-amount exp-info'>$
                 <%= expenditure.amount %>
               </p>
-          </div>
-          
-          <div>
-            <%= link_to "Show", expenditure, class: 'btn btn-outline-success btn-show' %>
-          </div>
         </div>
 
 
