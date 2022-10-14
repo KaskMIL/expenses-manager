@@ -68,8 +68,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Special aknowledgment to [gregorio Vella](www.gregoirevella.com), the design of the project is inspired in his work.
-- <a href="https://www.flaticon.com/free-icons/"> - Flaticon</a>
+- Special aknowledgment to [gregorio Vella](www.gregoirevella.com), the design of the project was inspired in his work.
+- <a href="https://www.flaticon.com/free-icons/">Flaticon</a>
 
 ## 📝 License
 
