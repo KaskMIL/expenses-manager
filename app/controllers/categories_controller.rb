@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1 or /categories/1.json
   def show
-    @expenditures = Expenditure.includes(:category).where(category_id: params[:id])
+    @expenditures = Expenditure.all.where(category_id: params[:id])
     @total_amount = 0
 
     @expenditures.each do |spend|
