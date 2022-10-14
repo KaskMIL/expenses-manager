@@ -9,11 +9,15 @@
 
     <p style="color: green"><%= notice %></p>
 
-    <div id="expenditures">
-      <% @expenditures.each do |expenditure| %>
-        <%= render expenditure %>
-      <% end %>
-    </div>
+    <% if @expenditures.empty?%>
+      <p class='no-cat'>No expenditures to show</p>
+    <% else %>
+      <div id="expenditures">
+        <% @expenditures.each do |expenditure| %>
+          <%= render expenditure %>
+        <% end %>
+      </div>
+    <% end %>
     <div class='sub-cat-cont'>
       <%= link_to "New expenditure", new_expenditure_path, class: 'btn btn-green sub-btn' %>
     </div>
